@@ -20,7 +20,7 @@ public class Tema {
 	@NotNull
 	private String forum;
 	@NotNull
-	private String post;
+	private String publicacao;
 	// Métodos gatters and setters
 
 	public long getId() {
@@ -39,12 +39,11 @@ public class Tema {
 		this.forum = forum;
 	}
 
-	public String getPost() {
-		return post;
+	public String getPublicacao() {
+		return publicacao;
 	}
 
-	public void setPost(String post) {
-		this.post = post;
+	public void setPublicacao(String publicacao) {
+		this.publicacao = publicacao;
 	}
-
 }

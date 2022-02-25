@@ -10,6 +10,6 @@ import com.integralproject.metoo.model.Tema;
 @Repository
 public interface TemaRepository extends JpaRepository<Tema,Long>{
 	
-	public List<Tema> findAllByPostContainingIgnoreCase(String post);
+	public List<Tema> findAllByPublicacaoContainingIgnoreCase(String publicacao);
 
 }
