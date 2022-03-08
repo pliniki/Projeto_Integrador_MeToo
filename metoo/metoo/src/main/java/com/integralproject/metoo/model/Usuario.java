@@ -25,10 +25,12 @@ public class Usuario {
 	private String nome;
 	
 	@NotNull
-	private String email;
+	private String usuario;
 	
 	@NotNull
 	private String senha;
+	
+	private String foto;
 	
 	@OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL) 
 	@JsonIgnoreProperties("usuario") 
@@ -50,14 +52,6 @@ public class Usuario {
 		this.nome = nome;
 	}
 
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
 	public String getSenha() {
 		return senha;
 	}
@@ -73,5 +67,23 @@ public class Usuario {
 	public void setPostagem(List<Postagem> postagem) {
 		this.postagem = postagem;
 	 }
+
+	public String getFoto() {
+		return foto;
+	}
+
+	public void setFoto(String foto) {
+		this.foto = foto;
+	}
+
+	public String getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(String usuario) {
+		this.usuario = usuario;
+	}
+	
+	
 
 }
