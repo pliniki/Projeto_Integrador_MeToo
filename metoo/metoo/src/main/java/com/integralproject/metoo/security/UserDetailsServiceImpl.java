@@ -2,7 +2,6 @@ package com.integralproject.metoo.security;
 
 import java.util.Optional;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -13,16 +12,16 @@ import com.integralproject.metoo.model.Usuario;
 import com.integralproject.metoo.repository.UsuarioRepository;
 
 @Service
-public class UserDetailsServiceImpl implements UserDetailsService{
+public class UserDetailsServiceImpl implements UserDetailsService {
 
 	@Autowired
-	private UsuarioRepository  userRepository;
-	
+	private UsuarioRepository userRepository;
+
 	@Override
 	public UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException {
-		Optional<Usuario>usuario = userRepository.findByUsuario(userName);
-		usuario.orElseThrow(() -> new  UsernameNotFoundException(userName + " not found."));
-		return usuario.map(UserDetailsImpl::new).get();
+		Optional<Usuario> user = userRepository.findByUsuario(userName);
+		user.orElseThrow(() -> new UsernameNotFoundException(userName + " not found."));
+
+		return user.map(UserDetailsImpl::new).get();
 	}
-	
 }
