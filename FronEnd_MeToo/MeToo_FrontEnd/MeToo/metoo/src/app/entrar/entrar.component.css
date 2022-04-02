@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Merienda&family=Poiret+One&family=Poppins:wght@100;300&family=Red+Hat+Mono&display=swap');
+
+* {
+    font-family: 'EB Garamond', serif;
+}
+
+#img-bg {
+    background-image: url(https://http2.mlstatic.com/D_NQ_NP_816902-MLB41010039194_032020-O.jpg);
+
+    min-height: 695px;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-login {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.container-fluid {
+    font-family: 'Brush Script MT';
+    font-size: x-large;
+    background-color: #cb383e;
+}
+
+.tx-roxo {
+    color: #B680A9;
+}
+
+
+
+input::placeholder {
+    color: #B680A9;
+}

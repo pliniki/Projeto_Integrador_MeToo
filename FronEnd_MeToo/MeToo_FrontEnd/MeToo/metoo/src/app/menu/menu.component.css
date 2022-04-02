@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Merienda&family=Poiret+One&family=Poppins:wght@100;300&family=Red+Hat+Mono&display=swap');
+
+
+* {
+    font-family: 'EB Garamond', serif;
+
+}
+
+.navbar {
+    font-family: 'Brush Script MT';
+    font-size: x-large;
+    background-color: #993399;
+}
+
+p {
+    color: white
+}
+
+.fs-16 {
+    font-size: 16pt;
+}
+
+.a {
+    cursor: pointer;
+}
