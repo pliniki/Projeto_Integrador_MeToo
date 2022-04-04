@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Merienda&family=Poiret+One&family=Poppins:wght@100;300&family=Red+Hat+Mono&display=swap');
 
-* {
+/** {
     font-family: 'EB Garamond', serif;
 
 }
@@ -24,4 +24,30 @@
 .container-fluid {
     font-family: 'Brush Script MT';
     font-size: x-large;
+}*/
+
+
+#bg {
+    background-image: url(https://http2.mlstatic.com/D_NQ_NP_816902-MLB41010039194_032020-O.jpg);
+
+    min-height: 695px;
+
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#tela-login {
+    width: 500px;
+    height: 610px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 1px 5px 30px #e57272;
+
+    background-color: #cb383e;
+    ;
+    opacity: 0.9;
+
 }

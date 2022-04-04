@@ -24,13 +24,13 @@ export class AuthService {
     return this.http.post<Usuario>('https://redesocialmetoo.herokuapp.com/usuarios/cadastrar', usuario);
   }
 
-  /*Logado() {
+  Logado() {
     let ok: boolean = false
 
     if (environment.token != '') {
       ok = true
     }
 
-    return ok 
-  }*/
+    return ok
+  }
 }

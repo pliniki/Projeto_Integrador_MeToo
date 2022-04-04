@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Merienda&family=Poiret+One&family=Poppins:wght@100;300&family=Red+Hat+Mono&display=swap');
+
+/*
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+
+  font-family: 'EB Garamond', serif;
+  --webkit-font-smoothing: antialiased !important;
+}
+
+li {
+  list-style: none;
+}*/
+
+/*
+header {
+  width: 100%;
+  height: 50px;
+
+  background-color: #cb383e;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+*/
+/*
+.main {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+div.newPost {
+  width: 100%;
+  height: 240px;
+  margin: 50px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: #ffff;
+  border-radius: 10px;
+  box-shadow: 1px 0 3px rgba(00, 0, 0, 0.1);
+
+}
+
+div.newPost div.infoUser {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+div.newPost div.infoUser div.imgUser {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: #333;
+
+}
+
+div.newPost div.infoUser strong {
+  font-size: 16px;
+  margin-left: 10px;
+  color: #cb383e;
+}
+
+div.newPost form.formPost {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+div.newPost form.formPost textarea {
+  background: rgb(224, 219, 219);
+  margin: 15px 0;
+  padding: 25px;
+  border-radius: 10px;
+  resize: none;
+  outline: none;
+  border: 0;
+
+  font-weight: bold;
+  color: #727272;
+
+}
+
+div.newPost form.formPost div.iconAndButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+div.newPost form.formPost div.iconAndButton div.icon button {
+  outline: none;
+  margin-right: 15px;
+  border: 0;
+  background: #ffff;
+  cursor: pointer;
+}
+
+div.newPost form.formPost div.iconAndButton div.icons button.btnSubmitForm {
+  background: #cb383e;
+  padding: 10px 50px;
+  color: #ffff;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+
+  border: 0;
+  border-radius: 10px;
+}*/
+
+#tela-login {
+  width: 900px;
+  height: 450px;
+
+  box-shadow: 1px 5px 30px #ffffff;
+
+  background-color: #fff;
+  opacity: 0.9;
+
+}
+
+div.newPost {
+  width: 100%;
+  height: 240px;
+  margin: 50px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: #ffff;
+  border-radius: 10px;
+  box-shadow: 1px 0 3px rgba(00, 0, 0, 0.1);
+
+}

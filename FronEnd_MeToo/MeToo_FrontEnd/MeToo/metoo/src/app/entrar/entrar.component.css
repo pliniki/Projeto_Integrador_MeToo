@@ -1,21 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Merienda&family=Poiret+One&family=Poppins:wght@100;300&family=Red+Hat+Mono&display=swap');
 
-* {
+/** {
     font-family: 'EB Garamond', serif;
+    font-size: 18px;
 }
 
-#img-bg {
-    background-image: url(https://http2.mlstatic.com/D_NQ_NP_816902-MLB41010039194_032020-O.jpg);
-
-    min-height: 695px;
-
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.bg-fundo {
+    background-color: #cb383e;
 }
 
 .bg-login {
-    background: rgba(0, 0, 0, 0.4);
+
+    background: rgba(0, 0, 0, 0.2);
 }
 
 .container-fluid {
@@ -24,12 +20,57 @@
     background-color: #cb383e;
 }
 
-.tx-roxo {
-    color: #B680A9;
+.tx-titulo {
+    font-size: 28px;
+    font-family: 'EB Garamond', serif;
+    font-weight: 500;
 }
 
-
+.tx-magento {
+    color: #cb383e;
+}
 
 input::placeholder {
-    color: #B680A9;
+    color: #cb383e;
+    font-size: 14px;
+}
+
+#telaLogin {
+    width: 400px;
+    height: 550px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 1px 5px 30px #e57272;
+
+}*/
+
+#bg {
+    background-image: url(https://http2.mlstatic.com/D_NQ_NP_816902-MLB41010039194_032020-O.jpg);
+
+    min-height: 695px;
+
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#tela-login {
+    width: 400px;
+    height: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*box-shadow: 1px 5px 30px #e57272;*/
+
+    background-color: #e57272;
+    /*opacity: 0.7;*/
+
+}
+
+.bg-login {
+    transform: translate(-50%, -50%);
+    box-shadow: 1px 5px 30px #e57272;
 }
