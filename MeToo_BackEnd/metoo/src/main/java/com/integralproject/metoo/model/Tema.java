@@ -24,7 +24,7 @@ public class Tema {
 
 	private String forum;
 	
-	private String publicacao;
+	private String publicacao; //descricao
 
 	@OneToMany(mappedBy = "tema", cascade = CascadeType.ALL) 
 	@JsonIgnoreProperties("tema") 
