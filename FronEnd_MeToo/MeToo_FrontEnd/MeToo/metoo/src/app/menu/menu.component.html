@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg ">
+<nav class="navbar navbar-expand-lg  ">
   
   <form class="form-inline ml-3">
     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -9,11 +9,16 @@
   <div class="collapse navbar-collapse sidebar mr-3 " id="conteudoNavbarSuportado">
     
     <ul class="navbar-nav ml-auto d-flex align-items-end">
-      <li class="nav-item pl-3">
-        <a routerLink="/entrar" >
-          <p class="m-0 font-weight-bold text-white fs-16">Home<i class="fa fa-home" aria-hidden="true"></i> </p>
-        </a>
+      
+      <li class="nav-item pl-6">
+        <a (click)='sair()' href="" class="m-0 font-weight-bold text-white fs-16">Sair <i class="fa fa-sign-out" aria-hidden="true"></i></a>
       </li>
+
+      <li class="nav-item pl-3" >
+        <a [routerLink]="['/usuario-edit',id]">
+      <p class="text-white fs-16 m-0"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></p>
+        </a> 
+    </li>
     
       <li class="nav-item pl-3">
         <a href="">
