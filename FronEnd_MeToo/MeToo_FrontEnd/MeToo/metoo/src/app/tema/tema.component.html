@@ -1,4 +1,4 @@
-<!--<div class="container-fluid fundo">
+<div class="container-fluid fundo">
 
     <div class="row bg-secondary">
         <div class="col-md-12 text-white">
@@ -12,12 +12,12 @@
 <h5 class="fs-18 text-center" >Veja aqui todos os temas cadastrados ou cadastre um novo:</h5>
         </div>
 <div class="row d-flex justify-content mt-4 mb-5">
-<div class="col-md-3">
+<div class="">
     <div class="form-group">
-        <input [(ngModel)]="tema.nome" type="text" class="form-control" id="descricao" placeholder="Digte o nome">
+        <input [(ngModel)]="tema.publicacao" type="text" class="form-control-lg" id="descricao exampleFormControlInput1" placeholder="Digte o nome">
     </div>
     <div class="form-group">
-      <input [(ngModel)]="tema.descricao" type="text" class="form-control" id="descricao" placeholder="Digte a descrição do tema">
+      <input [(ngModel)]="tema.publicacao" type="text" class="form-control" id="descricao" placeholder="Digte a descrição do tema">
   </div>
 
     <div class="d-flex justify-content">
@@ -56,8 +56,7 @@
                 <tbody>
                   <tr *ngFor="let tema of listaTema">
                     <th scope="row">{{tema.id}}</th>
-                    <td>{{tema.nome}}</td>
-                    <td>{{tema.descricao}}</td> 
+                    <td>{{tema.publicacao}}</td> 
                     <td>
                     <a [routerLink]="['/tema-edit',tema.id]"><i class="fa fa-pencil-square-o ml-2" aria-hidden="true"></i></a> 
                   
@@ -74,6 +73,6 @@
     </div>
 
 
-</div>-->
+</div>
 
 
