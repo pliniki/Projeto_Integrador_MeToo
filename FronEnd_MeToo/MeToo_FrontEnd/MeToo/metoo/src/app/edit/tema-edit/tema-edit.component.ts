@@ -9,13 +9,14 @@ import { TemaService } from 'src/app/service/tema.service';
   styleUrls: ['./tema-edit.component.css']
 })
 export class TemaEditComponent implements OnInit {
-
+  tema: Tema = new Tema
+  
   constructor(
     private router: Router,
     private route: ActivatedRoute,
     private temaService: TemaService
   ) { }
-tema: Tema = new Tema
+
 
   ngOnInit() {
 
