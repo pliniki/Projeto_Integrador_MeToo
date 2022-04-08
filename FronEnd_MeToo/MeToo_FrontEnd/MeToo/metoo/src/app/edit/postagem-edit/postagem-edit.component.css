@@ -1,0 +1,14 @@
+.bg-atualizarTema {
+  background-image: url(https://i.imgur.com/Nzv9iaj.png);
+
+
+  min-height: 350px;
+
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bx-form {
+  box-shadow: 1px 5px 10px #dfafee;
+}

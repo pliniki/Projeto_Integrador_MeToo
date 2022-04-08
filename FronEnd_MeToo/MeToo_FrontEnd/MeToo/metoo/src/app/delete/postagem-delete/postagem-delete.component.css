@@ -1,0 +1,36 @@
+.bg-atualizarTema {
+  background-image: url(https://i.imgur.com/45HPLFn.png);
+
+
+  min-height: 350px;
+
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-login02 {
+
+  box-shadow: 1px 5px 30px #ca69e2;
+}
+
+div.infoUser {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+
+}
+
+div.imgUser {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: #333;
+
+}
+
+div.infoUser strong {
+  font-size: 16px;
+  margin-left: 10px;
+
+}

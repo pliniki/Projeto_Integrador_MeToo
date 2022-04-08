@@ -13,10 +13,16 @@
   --webkit-font-smoothing: antialiased !important;
 }
 
+.bg-pi{
+  background-image: url(https://i.imgur.com/45HPLFn.png);
 
-.main {
-  max-width: 900px;
-  margin: 0 auto;
+
+  min-height: 350px;
+
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+
 }
 
 .lg-post {
@@ -69,3 +75,15 @@ background-color: grey ;
   background-color: rgba(243, 58, 74, 0.944);
 
 }
+
+
+
+
+hr {
+  display: flex;
+  flex-wrap: wrap;
+  border-color: white;
+  width: 10px;
+  flex-basis: 25%;
+}
+
