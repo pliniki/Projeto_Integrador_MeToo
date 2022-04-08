@@ -21,6 +21,8 @@ export class PaginaInicialComponent implements OnInit {
   listaTemas: Tema[]
   idTema: number
   usuario: Usuario = new Usuario()
+  foto = environment.foto
+  nome = environment.nome
   idUsuario = environment.id
   constructor(
     private router: Router,

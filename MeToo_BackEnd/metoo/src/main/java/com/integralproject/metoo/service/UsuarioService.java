@@ -5,8 +5,10 @@ import java.util.Optional;
 
 import org.apache.commons.codec.binary.Base64;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
 
 import com.integralproject.metoo.model.UserLogin;
 import com.integralproject.metoo.model.Usuario;
@@ -43,6 +45,8 @@ public class UsuarioService {
 				user.get().setNome(usuario.get().getNome());
 				user.get().setFoto(usuario.get().getFoto());
 				user.get().setTipo(usuario.get().getTipo());
+				user.get().setSenha(usuario.get().getSenha());
+				
 				
 
 				return user;
@@ -51,5 +55,34 @@ public class UsuarioService {
 
 		return null;
 	}
+	
+	public Optional<Usuario> atualizarUsuario(Usuario usuario) {
+
+		if (repository.findById(usuario.getId()).isPresent()) {
+			Optional<Usuario> buscaUsuario = repository.findByUsuario(usuario.getUsuario());
+
+			if ((buscaUsuario.isPresent()) && (buscaUsuario.get().getId() != usuario.getId()))
+				throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Usuário já existe!", null);
+
+			usuario.setSenha(criptografarSenha(usuario.getSenha()));
+
+			return Optional.ofNullable(repository.save(usuario));
+
+		}
+		return Optional.empty();
+
+	}
+	
+	private String criptografarSenha(String senha) {
+
+		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+
+		return encoder.encode(senha);
+
+	}
+
+	
+	
+	
 
 }

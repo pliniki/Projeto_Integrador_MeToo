@@ -25,6 +25,7 @@ export class TemaEditComponent implements OnInit {
   // }
 
   let id:number=this.route.snapshot.params['id']
+  this.findByTema(id)
   }
 
   findByTema(id:number){

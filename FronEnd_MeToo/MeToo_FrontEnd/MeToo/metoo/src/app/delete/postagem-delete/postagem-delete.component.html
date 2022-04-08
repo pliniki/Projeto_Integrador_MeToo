@@ -21,17 +21,17 @@
           <div class="imgUser "></div>
           <strong>Robson Carmo</strong>
         </div>
-        <h5 class="card-title mt-3 mb-3">Título da Postagem Minhas Postagens</h5>
-        <h6 class="card-subtitle mb-2 text-dark mb-4">Tema da Postagem</h6>
-        <p class="card-text mb-3">Texto da postagem! Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
+        <h5 class="card-title mt-3 mb-3">{{postagem.titulo}}</h5>
+        <h6 class="card-subtitle mb-2 text-dark mb-4">Tema: {{postagem.tema.publicacao}}</h6>
+        <p class="card-text mb-3">{{postagem.texto}}</p>
        
       </div>
     </div>
 
     <div class="row mt-5">
       <div class="col-md-12 d-flex justify-content-center mb-5">
-        <button class="btn-outline-danger w-25 mr-3">Nao</button>
-        <button class="btn-outline-info w-25 ">Sim</button>
+        <button class="btn-outline-danger w-25 mr-3" routerLink='/inicio'>Nao</button>
+        <button class="btn-outline-info w-25 " >Sim</button>
       </div>
     </div>
 

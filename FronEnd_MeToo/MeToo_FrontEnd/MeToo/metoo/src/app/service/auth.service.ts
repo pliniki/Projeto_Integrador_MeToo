@@ -17,18 +17,18 @@ export class AuthService {
   constructor(private http: HttpClient) { }
 
   Entrar(userLogin: UserLogin): Observable<UserLogin> {
-    return this.http.post<UserLogin>('https://redesocialmetoo.herokuapp.com/usuarios/logar', userLogin);
+    return this.http.post<UserLogin>('http://localhost:8080/usuarios/logar', userLogin);
   }
 
   Cadastrar(usuario: Usuario): Observable<Usuario> {
-    return this.http.post<Usuario>('https://redesocialmetoo.herokuapp.com/usuarios/cadastrar', usuario);
+    return this.http.post<Usuario>('http://localhost:8080/usuarios/cadastrar', usuario);
   }
   atualizar(usuario: Usuario): Observable<Usuario>{
-    return this.http.put<Usuario>('https://redesocialmetoo.herokuapp.com/atualizar', usuario)
+    return this.http.put<Usuario>('http://localhost:8080/atualizar', usuario)
       }
   
   getByIdUsuario(id: number): Observable<Usuario>{
-    return this.http.get<Usuario>(`https://redesocialmetoo.herokuapp.com/usuarios/${id}`)
+    return this.http.get<Usuario>(`http://localhost:8080/usuarios/${id}`)
   }
   Logado() {
     let ok: boolean = false

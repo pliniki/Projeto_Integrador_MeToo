@@ -23,13 +23,17 @@ const routes: Routes = [
   {path: 'pagina-inicial', component: PaginaInicialComponent},
   {path: 'rodape', component: RodapeComponent},
 
+  {path: 'tema-edit/:id', component: TemaEditComponent },
+  {path: 'tema-delete/:id', component: TemaDeleteComponent },
   {path: 'tema', component: TemaComponent},
-  {path: 'tema-edit', component: TemaEditComponent},
-  {path: 'tema-delete', component: TemaDeleteComponent},
+ 
 
-  {path: 'postagem-edit', component: PostagemEditComponent},
-  {path: 'postagem-delete', component: PostagemDeleteComponent},
-  {path: 'usuario-edit/:id', component: UsuarioEditComponent}
+  {path: 'postagem-delete/:id', component: PostagemDeleteComponent },
+  {path: 'postagem-edit/:id', component: PostagemEditComponent },
+ 
+
+  {path: 'usuario-edit/:id', component: UsuarioEditComponent },
+ 
 
 ];
 

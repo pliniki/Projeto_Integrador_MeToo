@@ -8,9 +8,9 @@
             <div class="card-body">               
               <div class="" >
                 <div >
-                  <img  src="[(ngModel)]='usuario.foto'"  alt="" width="50px" height="50px" class="img-fluid rounded-circle">
+                  <img  src="{{foto}}"  alt="" width="50px" height="50px" class="img-fluid rounded-circle">
                 </div>
-                <p>{{usuario.nome}}</p>
+                <h5>{{nome}}</h5>
                 
               </div>
               </div>
@@ -78,14 +78,14 @@
   
           <div class="tab-pane fade show active" id="todasPostagens" role="tabpanel" aria-labelledby="nav-todasPostagens-tab">
 
-          <div class="card bg-card lg-post ml-5 mb-3" style=border-radius:25px; >
-            <div class="card-body text-secondary" *ngFor='let item of listaPostagens'>
+          <div class="card bg-card lg-post ml-5 mb-3" style=border-radius:25px; *ngFor='let item of listaPostagens' >
+            <div class="card-body text-secondary" >
               <hr class="bg-white" width="100%" heigth="100%" >
               <div class="infoUser">
                 <div >
-                  <img class="imgUser " src="{{item.usuario.foto}}" alt="" width="50px" height="50px" class="img-fluid rounded-circle">
+                  <img class="imgUser mr-3 " src="{{item.usuario.foto}}" alt="" width="50px" height="50px" class="img-fluid rounded-circle">
                 </div>
-                <p>{{item.usuario.nome}}</p>
+                <h6>{{item.usuario.nome}}</h6>
                 
               </div>
               <h5 class="card-title mt-3 mb-2">{{item.titulo}}</h5>
@@ -103,11 +103,13 @@
 
           
         <div class="tab-pane fade" id="minhasPostagens" role="tabpanel" aria-labelledby="nav-minhasPostagens-tab">
-          <div class="card bg-card lg-post ml-5 mb-3" style=border-radius:25px; >
-            <div class="card-body text-secondary" *ngFor='let item of usuario.postagem '>
+          <div class="card bg-card lg-post ml-5 mb-3" style=border-radius:25px; *ngFor='let item of usuario.postagem ' >
+            <div class="card-body text-secondary" >
               <div class="infoUser">
-                <div class="imgUser "></div>
-                <strong>{{usuario.nome}}</strong>
+                <div >
+                  <img class="imgUser mr-3 " src="{{item.usuario.foto}}" alt="" width="50px" height="50px" class="img-fluid rounded-circle">
+                </div>
+                <p class="ml-3">{{usuario.nome}}</p>
               </div>
               <h5 class="card-title mt-3 mb-2">{{item.titulo}}</h5>
               <h6 class="card-subtitle mb-2 text-muted mb-4">Tema: {{item.tema.publicacao}}</h6>
@@ -115,8 +117,10 @@
               <p class="card-text"><small class="text-muted">
                 {{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}}
               </small></p>
-              <a href="#" class="card-link text-primary">Editar</a>
-              <a href="#" class="card-link text-danger">Apagar</a>
+              <a [routerLink]="['/postagem-edit', item.id]" class="card-link text-primary" >Editar</a>
+              <button routerLink="'/postagem-edit', item.id"  class="button text-primary">ed</button>
+              <a [routerLink]="['/postagem-delete', item.id]" class="card-link text-danger" >Apagar</a>
+
             </div>
           </div>
           </div>    
