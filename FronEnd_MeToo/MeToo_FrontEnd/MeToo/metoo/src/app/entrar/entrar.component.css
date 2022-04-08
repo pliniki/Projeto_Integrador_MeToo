@@ -1,53 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Merienda&family=Poiret+One&family=Poppins:wght@100;300&family=Red+Hat+Mono&display=swap');
 
-/** {
-    font-family: 'EB Garamond', serif;
-    font-size: 18px;
-}
 
-.bg-fundo {
-    background-color: #cb383e;
-}
-
-.bg-login {
-
-    background: rgba(0, 0, 0, 0.2);
-}
-
-.container-fluid {
-    font-family: 'Brush Script MT';
-    font-size: x-large;
-    background-color: #cb383e;
-}
-
-.tx-titulo {
-    font-size: 28px;
-    font-family: 'EB Garamond', serif;
-    font-weight: 500;
-}
-
-.tx-magento {
-    color: #cb383e;
-}
-
-input::placeholder {
-    color: #cb383e;
-    font-size: 14px;
-}
-
-#telaLogin {
-    width: 400px;
-    height: 550px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    box-shadow: 1px 5px 30px #e57272;
-
-}*/
-
-#bg {
-    background-image: url(https://http2.mlstatic.com/D_NQ_NP_816902-MLB41010039194_032020-O.jpg);
+.bg {
+    background-image: url(https://i.imgur.com/vsh2qcK.png);
 
     min-height: 695px;
 
@@ -65,12 +20,23 @@ input::placeholder {
     transform: translate(-50%, -50%);
     /*box-shadow: 1px 5px 30px #e57272;*/
 
-    background-color: #e57272;
+    /*background-color: #e57272;*/
     /*opacity: 0.7;*/
 
+    background-image: linear-gradient(
+          -45deg, 
+          rgb(116, 159, 178) 0%, 
+          rgb(154, 164, 212) 25%, 
+          rgb(218, 137, 203) 51%, 
+          rgb(197, 156, 215) 100%
+    );  
+    animation: AnimateBG 20s ease infinite;
+    
+
 }
 
-.bg-login {
+/*.bg-login {
     transform: translate(-50%, -50%);
     box-shadow: 1px 5px 30px #e57272;
-}
+}*/
+
