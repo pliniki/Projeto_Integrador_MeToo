@@ -11,4 +11,4 @@ Weslley Oliveira [Linkedin](#) <br>
 Thamires Pereira [Linkedin](#) <br>
 Paulo Carvalho [Linkedin](https://www.linkedin.com/in/paulo-carvalho/) <br>
 Wagner Carmo [Linkedin](#) <br>
-Rafael Lima [Linkedin](#) <br>
+Rafael Lima [Linkedin](https://www.linkedin.com/in/rafael-lima-21322a158/) <br>
