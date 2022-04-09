@@ -28,8 +28,7 @@
 
 
 #bg {
-    background-image: url(https://http2.mlstatic.com/D_NQ_NP_816902-MLB41010039194_032020-O.jpg);
-
+    background-image: url(https://i.ibb.co/X5JWfNH/Mee-Too-4.png);
     min-height: 695px;
 
     background-attachment: fixed;
@@ -44,9 +43,9 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    box-shadow: 1px 5px 30px #e57272;
+    box-shadow: 1px 5px 30px #74C1B2;
 
-    background-color: #cb383e;
+    background-color: #74C1B2;
     ;
     opacity: 0.9;
 

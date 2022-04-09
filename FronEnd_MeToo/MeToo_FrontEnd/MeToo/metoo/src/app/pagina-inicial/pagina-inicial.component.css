@@ -1,90 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Merienda&family=Poiret+One&family=Poppins:wght@100;300&family=Red+Hat+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
-
-* {
-  margin: 0;
-  padding: 10;
-
-  box-sizing: border-box;
-
-
-  font-family: 'Poppins', sans-serif;
-  --webkit-font-smoothing: antialiased !important;
+.fs-54{
+  font-size: 54pt;
 }
 
-.bg-pi{
-  background-image: url(https://i.imgur.com/45HPLFn.png);
+.fs-18{
+  font-size: 18pt;
+}
 
 
-  min-height: 350px;
 
-  background-attachment: fixed;
+.fundo {
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
+  background: linear-gradient(to bottom, yellow, rgb(87, 0, 128));
+  font-weight: bold;
+  text-align: center;
+  color: black;
+  }
 
-}
-
-.lg-post {
-  width: 80%;
-}
-
-div.infoUser {
-  display: flex;
-  align-items: center;
-  justify-content:flex-start;
-  
-
-}
-
-div.imgUser {
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  background: #333;
-
-}
-
-div.infoUser strong {
-  font-size: 16px;
-  margin-left: 10px;
-  
-}
-
-.bg-menu-lateral {
-  background-color: azure;
-}
-
-textarea {
-  resize: none;
-}
-
-
-.bg-card{
-
-  background-color:rgba(59, 227, 196, 0.42);
-  
-
-}
-
-.btg-enviar{
-background-color: grey ;
-}
-
-.btg-cancelar{
-
-  background-color: rgba(243, 58, 74, 0.944);
-
-}
-
-
-
-
-hr {
-  display: flex;
-  flex-wrap: wrap;
-  border-color: white;
-  width: 10px;
-  flex-basis: 25%;
-}
-
+  .fundo-2 {
+  background-repeat: no-repeat;
+  background-size: contain;
+  text-align: center;
+  background: linear-gradient(  rgb(87, 0, 128),yellow);
+  cursor: pointer; /*muda o ponteiro em links*/
+  list-style: none; /*retira a bolinha do topico*/ 
+  color: black; 
+      }
