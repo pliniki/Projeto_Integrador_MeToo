@@ -17,6 +17,8 @@ export class PaginaInicialComponent implements OnInit {
   tema: Tema = new Tema()
   listaTemas: Tema[]
 
+  forum = environment.forum
+
   postagem: Postagem = new Postagem()
   listaPostagens: Postagem[]
   idTema: number
@@ -41,9 +43,10 @@ export class PaginaInicialComponent implements OnInit {
     this.getAllTemas()
     this.getAllPostagens()
   }
-  getAllTemas() {
+  getAllTemas( ) {
     this.temaService.getAllTema().subscribe((resp: Tema[]) => {
       this.listaTemas = resp
+    
     })
   }
 

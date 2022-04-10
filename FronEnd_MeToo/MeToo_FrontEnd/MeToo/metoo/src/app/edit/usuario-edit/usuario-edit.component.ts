@@ -44,16 +44,16 @@ export class UsuarioEditComponent implements OnInit {
     if (this.usuario.senha != this.confirmarSenha) {
       /*this.alertas.showAlertDanger('A senhas estão incorretas.')*/
     } else {
-      this.authService.atualizar(this.usuario).subscribe((resp: Usuario) => {
+      this.authService.cadastrar(this.usuario).subscribe((resp: Usuario) => {
         this.usuario = resp
-        this.router.navigate(['/inicio'])
-        /*this.alertas.showAlertSuccess('Usuário atualizado com sucesso, faça o login novamente.')*/
+        alert('Usuário cadastrado com sucesso')
+        this.router.navigate(['/pagina-inicial'])
         environment.token = ''
         environment.nome = ''
         environment.foto = ''
         environment.id = 0
 
-        this.router.navigate(['/entrar'])
+        /*this.router.navigate(['/entrar'])*/
       })
     }
   }

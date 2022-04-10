@@ -14,9 +14,9 @@
                 <h6 class='mt-2 text-white'>{{nome}}</h6>                                
               </div>
               <div class=" text-center">
-              <button class="btn w-75 btn-outline-primary mb-2 mt-3" data-toggle="modal" data-target="#novaPostagem">Nova Postagem</button>
-              <a class="btn w-75 btn-outline-light " data-toggle="modal" data-target="#novaPostagem">Forum</a>
-              </div>
+                <button class="btn w-75 btn-outline-primary mb-2 mt-3" data-toggle="modal" data-target="#novaPostagem">Nova Postagem</button>
+                <a class="btn w-75 btn-outline-light " data-toggle="modal" data-target="#novoForum">Forum</a>
+                </div>
             </div>
           </div>
         </div>
@@ -35,7 +35,7 @@
                     Postagens</a>
                   <a class="nav-item nav-link text-light mt-2 mb-2 text-center font-weight-bold"
                     id="nav-postagemTema-tab" data-toggle="tab" href="#postagemTema" role="tab" aria-controls="nav-postagemTema"
-                    aria-selected="false">Forum</a>
+                    aria-selected="false" data-bs-toggle="tooltip" data-bs-placement="right" title="Implementacao Futura">Forum</a>
                   <a class="nav-item nav-link text-light mt-2 mb-2 text-center font-weight-bold"
                   id="" data-toggle="tab" href="" role="tab"
                   aria-controls="nav-todasPostagens" aria-selected="true"
@@ -113,7 +113,7 @@
 
                 <div class="card-body text-white">
                   <h5 class="card-title m-0">{{item.titulo}}</h5>
-                  <small class="text-muted"> Tema: {{item.tema.publicacao}}</small>
+                  <small class="text-muted"> Tema: {{item.tema.forum}}</small>
                   <p class="card-text mt-3">{{item.texto}}</p>
                   <div class=" d-flex justify-content-center align-items-center">
                     <div >
@@ -145,7 +145,7 @@
             </div>
             <div style=border-radius:25px; *ngFor='let tema of listaTemas'>
               <div class="card mb-3 bg-postagens" style=border-radius:25px; *ngFor='let item of tema.postagem'>
-                <div class="card-body text-white">
+                <div class="card-body text-white" >
                   <h5 class="card-title m-0 text-center">{{item.titulo}}</h5>
                   <p class="card-text mt-3">{{item.texto}}</p>
                   <div class=" d-flex justify-content-center align-items-center">                 
@@ -155,8 +155,10 @@
                     <h6 class='ml-2'>{{nome}}<br>
                     <p class="card-text ml-2"><small class="text-light">{{item.data}}</small></p> 
                     </h6> 
-                                                  
+                                              
                   </div>
+                  <a  class="text-info text-center mt-2 mr-3" href="">Respoder</a>
+                  <a  class="text-sucess text-center mt-2 " href="">Visualizar respostas</a>
                 </div>
               </div>
             </div>
@@ -172,13 +174,14 @@
 
 
 
-<!-- Modal -->
-<div class="modal fade " id="novaPostagem" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
+<!-- MODAL POSTAGEM -->
+<div class="modal fade bg-transparente" id="novaPostagem" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
   aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered " role="document">
-    <div class="modal-content">
+  <div class="modal-dialog modal-dialog-centered bg-postagens" role="document">
+    <div class="modal-content bg-postagens">
+
       <div class="modal-header">
-        <h5 class="modal-title" id="TituloModalCentralizado">Nova Postagem</h5>
+        <h5 class="modal-title text-white" id="TituloModalCentralizado">Nova Postagem</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -186,17 +189,17 @@
       <div class="modal-body">
 
         <div class="form-group">
-          <label for="titulo">Título</label>
+          <label class="text-white" for="titulo ">Título</label>
           <input [(ngModel)]='postagem.titulo' type="text" class="form-control" id="titulo"
             placeholder="Digite o título">
         </div>
 
-        <div class="form-group">
+        <div class="form-group text-white">
           <label for="texto">Texto</label>
           <textarea [(ngModel)]='postagem.texto' class="form-control" name="texto" id="texto" rows="3"></textarea>
         </div>
 
-        <div class="form-group">
+        <div class="form-group text-white">
           <label for="texto">Escolha um tema ou <a data-dismiss="modal" routerLink='/tema'>cadastre um novo</a>:
           </label>
           <select name="tema" id="tema" class="form-control" [(ngModel)]='idTema' (change)='findByIdTema()'>
@@ -207,10 +210,56 @@
         </div>
 
       </div>
-      <div class="modal-footer">
+      <div class="modal-footer text-white">
         <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-success" (click)='publicar()' data-dismiss="modal">Publicar</button>
+        <button type="button" class="btn btn-primary" (click)='publicar()' data-dismiss="modal">Publicar</button>
       </div>
     </div>
   </div>
 </div>
+<!-- /MODAL POSTAGEM -->
+
+<!-- MODAL FORUM -->
+<div class="modal fade bg-transparente" id="novoForum" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered bg-postagens" role="document">
+    <div class="modal-content bg-postagens">
+
+      <div class="modal-header">
+        <h5 class="modal-title text-white" id="TituloModalCentralizado">Nova Pergunta do Forum</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+        <div class="form-group">
+          <label class="text-white" for="titulo ">Assunto</label>
+          <input [(ngModel)]='postagem.titulo' type="text" class="form-control" id="titulo"
+            placeholder="Digite sua pergunta">
+        </div>
+
+        <div class="form-group text-white">
+          <label for="texto">Digite uma pergunta:</label>
+          <textarea [(ngModel)]='postagem.texto' class="form-control" name="texto" id="texto" rows="3"></textarea>
+        </div>
+
+        <div class="form-group text-white">
+          <label for="texto">Escolha um forum ou <a data-dismiss="modal" routerLink='/tema'>cadastre um novo</a>:
+          </label>
+          <select name="tema" id="tema" class="form-control" [(ngModel)]='idTema' (change)='findByIdTema()'>
+            <option *ngFor='let item of listaTemas' value="{{item.id}}">
+              {{item.forum}}
+            </option>
+          </select>
+        </div>
+
+      </div>
+      <div class="modal-footer text-white">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary" (click)='publicar()' data-dismiss="modal">Publicar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /MODAL FORUM -->
