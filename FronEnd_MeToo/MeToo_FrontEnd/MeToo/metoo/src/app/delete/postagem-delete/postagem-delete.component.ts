@@ -27,6 +27,7 @@ export class PostagemDeleteComponent implements OnInit {
     }
     this.idPost = this.route.snapshot.params['id']
     this.findByIdPostagem(this.idPost)
+    
 
   }
 
@@ -39,7 +40,8 @@ export class PostagemDeleteComponent implements OnInit {
 
   apagar(){
     this.postagemService.deletePostagem(this.idPost).subscribe(()=>{  
-      this.router.navigate(['/inicio'])
+      alert("Mensagem apagada com sucesso")
+      this.router.navigate(['/pagina-inicial'])
     })
   }
 

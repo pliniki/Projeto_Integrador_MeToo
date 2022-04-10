@@ -37,7 +37,7 @@ this.findAllTemas()
 
   findByIdPostagem(id: number){
     this.postagemService.getByIdPostagem(id).subscribe((resp:Postagem)=>{
-
+    this.postagem = resp
     })
   }
 
@@ -59,7 +59,7 @@ this.postagem.tema = this.tema
 this.postagemService.putPostagem(this.postagem).subscribe((resp: Postagem)=>{
   this.postagem = resp
   alert('Postagem atualizada com sucesso!')
-  this.router.navigate(['/inicio'])
+  this.router.navigate(['/pagina-inicial'])
 })
   }
 
