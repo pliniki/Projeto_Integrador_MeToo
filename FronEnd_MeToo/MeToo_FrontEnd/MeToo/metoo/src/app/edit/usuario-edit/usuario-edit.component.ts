@@ -39,12 +39,12 @@ export class UsuarioEditComponent implements OnInit {
   }
 
   atualizar() {
-    this.usuario.tipo = this.tipoUsuario
+
 
     if (this.usuario.senha != this.confirmarSenha) {
       /*this.alertas.showAlertDanger('A senhas estão incorretas.')*/
     } else {
-      this.authService.cadastrar(this.usuario).subscribe((resp: Usuario) => {
+      this.authService.atualizar(this.usuario).subscribe((resp: Usuario) => {
         this.usuario = resp
         alert('Usuário cadastrado com sucesso')
         this.router.navigate(['/pagina-inicial'])

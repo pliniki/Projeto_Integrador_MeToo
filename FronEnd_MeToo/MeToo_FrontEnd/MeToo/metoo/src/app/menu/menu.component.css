@@ -24,7 +24,7 @@ p {
     cursor: pointer;
 }
 
-  .bg {
+.bg {
 
     display: flex;
     align-items: center;
@@ -49,4 +49,3 @@ p {
         background-position: 0% 50%
     }
 }
-  

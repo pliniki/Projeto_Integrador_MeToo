@@ -15,23 +15,26 @@
       </div>
     </div>
 
-    <div class="card bg-login lg-post ml-5 mb-3 bg-login02" style=border-radius:25px; >
+    <div class="card bg-card-delete lg-post ml-5 mb-3 bg-login02" style=border-radius:25px; >
       <div class="card-body text-secondary">
-        <div class="infoUser">
-          <div class="imgUser "></div>
-          <strong>Robson Carmo</strong>
+        <div class=" d-flex mt-2 justify-content-start align-items-center">                 
+          <div >                   
+            <img class="imgUser mr-3 " src="{{foto}}" alt="" width="35px" height="35px" class="img-fluid rounded-circle">                 
+          </div>                 
+          <h6 class='ml-2 text-white'>{{nome}}
+          </h6>                           
         </div>
-        <h5 class="card-title mt-3 mb-3">{{postagem.titulo}}</h5>
-        <h6 class="card-subtitle mb-2 text-dark mb-4">Tema: {{postagem.tema.publicacao}}</h6>
-        <p class="card-text mb-3">{{postagem.texto}}</p>
+        <h5 class="card-title mt-3 mb-3 text-white">{{postagem.titulo}}</h5>
+       
+        <p class="card-text mb-3 text-white">{{postagem.texto}}</p>
        
       </div>
     </div>
 
     <div class="row mt-5">
       <div class="col-md-12 d-flex justify-content-center mb-5">
-        <button class="btn-outline-danger w-25 mr-3" routerLink='/pagina-inicial'>Nao</button>
-        <button class="btn-outline-info w-25 " (click)='apagar()' >Sim</button>
+        <button class="btn-danger w-25 mr-3" routerLink='/pagina-inicial'>Nao</button>
+        <button class="btn-info w-25 " (click)='apagar()' >Sim</button>
       </div>
     </div>
 

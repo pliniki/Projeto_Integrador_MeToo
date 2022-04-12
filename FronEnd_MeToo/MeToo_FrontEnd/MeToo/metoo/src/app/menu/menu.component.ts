@@ -22,7 +22,7 @@ export class MenuComponent implements OnInit {
   }
 
   sair(){
-    this.router.navigate(['/entrar'])
+    this.router.navigate(['/abertura'])
     environment.token=''
     environment.nome=''
     environment.foto=''

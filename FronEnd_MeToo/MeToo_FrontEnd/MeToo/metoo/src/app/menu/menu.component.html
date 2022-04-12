@@ -1,41 +1,36 @@
-<nav class="bg navbar-expand-lg  ">
+<nav class="bg navbar-expand-lg ">
   
-  <form class="form-inline ml-3">
-    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-info my-2 my-sm-0" type="submit">Search</button>
-  </form>
+  <a class="ml-3" routerLink="/pagina-inicial"> <img src="https://i.ibb.co/y0D3KnY/Mee-Too-7.png" alt=""width="85px" height="85px" > </a>
 
-   <!--iCONES HOME / MENSAGENS / fOTO PERFIL-->
-  <div class="collapse navbar-collapse sidebar mr-3 " id="conteudoNavbarSuportado">
+  <form class="form-inline ml-5">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
+  </form>
+  <div class="collapse navbar-collapse sidebar mr-3  mb-2 " id="conteudoNavbarSuportado">
     
     <ul class="navbar-nav ml-auto d-flex align-items-end">
       
-      <li class="nav-item pl-6">
-        <a (click)='sair()' href="" class="m-0 font-weight-bold text-white fs-16">Sair<i class="fa fa-sign-out" aria-hidden="true"></i></a>
+      <li>
+        <a  routerLink="/pagina-inicial"><img class="mr-2 mt-2 mb-2" src="https://i.imgur.com/PF40fDZ.png" alt="" width="40px"></a>
       </li>
 
-      <li class="nav-item pl-3" >
-        <a [routerLink]="['/usuario-edit',id]">
-      <p class="text-white fs-16 m-0"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></p>
-        </a> 
-    </li>
-    
-      <li class="nav-item pl-3">
-        <a href="">
-          <p class="text-white fs-16 m-0"> <i href="/MeToo/metoo/src/assets/img/Home.svg"></i> </p>
-        </a>
+      <li>
+        <a  [routerLink]="['/usuario-edit', id]"><img class="mr-2 mt-2 mb-2" src="https://i.imgur.com/RanVaqm.png" alt="" width="40px"></a>
       </li>
 
-      <li class="nav-item active ">
-        <img src="{{foto}}" alt="Imagem do user" width="50px" height="50px"
-          class="img-fluid rounded-circle">
+      <li>
+        <a  (click)='sair()'><img class="mr-3 mt-2 mb-2" src="https://i.imgur.com/IW6plfW.png" alt="" width="40px"></a>
       </li>
-      <li class="nav-item pl-3">
-        <p class="m-0 font-weight-bold text-white fs-16">{{nome}}</p>
+
+      <li>
+        <a  ><img class="mr-3 mt-2 mb-2" src="https://i.imgur.com/NkArWDY.png" alt="" width="40px"></a>
       </li>
+
     </ul>
   </div>
 
-</nav>
+</nav> 
+
+
 
 

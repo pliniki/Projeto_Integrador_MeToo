@@ -23,11 +23,11 @@ export class AuthService {
   Cadastrar(usuario: Usuario): Observable<Usuario> {
     return this.http.post<Usuario>('https://redesocialmetoo.herokuapp.com/usuarios/cadastrar', usuario);
   }
-  cadastrar(usuario: Usuario): Observable<Usuario>{
-    return this.http.put<Usuario>('https://redesocialmetoo.herokuapp.com/atualizar', usuario)
-      }
-  
-  getByIdUsuario(id: number): Observable<Usuario>{
+  atualizar(usuario: Usuario): Observable<Usuario> {
+    return this.http.put<Usuario>('https://redesocialmetoo.herokuapp.com/usuarios/atualizar', usuario)
+  }
+
+  getByIdUsuario(id: number): Observable<Usuario> {
     return this.http.get<Usuario>(`https://redesocialmetoo.herokuapp.com/usuarios/${id}`)
   }
   Logado() {

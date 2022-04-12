@@ -26,6 +26,10 @@ export class PaginaInicialComponent implements OnInit {
   foto = environment.foto
   nome = environment.nome
   idUsuario = environment.id
+
+key = 'data'
+reverse = true
+
   constructor(
     private router: Router,
     private postagemService: PostagemService,

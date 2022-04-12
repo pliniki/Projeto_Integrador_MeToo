@@ -38,3 +38,7 @@
 .bg-transparente-menu {
   background: rgba(22, 2, 66, 0.7);
 }
+
+.text-links-nav {
+  color: rgb(174, 206, 255);
+}
