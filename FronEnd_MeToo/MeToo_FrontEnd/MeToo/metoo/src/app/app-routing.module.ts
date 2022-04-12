@@ -15,7 +15,7 @@ import { TemaComponent } from './tema/tema.component';
 
 const routes: Routes = [
 
-  {path: '', redirectTo: 'entrar', pathMatch: 'full'},
+  {path: '', redirectTo: 'abertura', pathMatch: 'full'},
   
   {path: 'menu', component: MenuComponent},
   {path: 'entrar', component: EntrarComponent},
